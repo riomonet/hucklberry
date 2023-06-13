@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="huckleberry-agency-website">Huckleberry Agency Website</h1>
+<p>In this workshop, you’ll build a minimal landing page for an agency.</p>
+<p>This mockup is built entirely using <em>flow layout</em>: no Flexbox, no grid, no absolute positioning, no media queries. It relies heavily on padding, margin, and border, as well as some of the tricks we learned in Module 1.</p>
+<p><img alt="Desktop-sized screenshot of an agency landing page" src="./docs/huckleberry-desktop.png" style="" /></p>
+<p>The design is available on Figma:</p>
+<ul>
+<li>https://www.figma.com/file/6hGqKA5scrZJScb9KW3Hj2/Huckleberry</li>
+</ul>
+<h2 id="setup-instructions">Setup Instructions</h2>
+<p>This project uses an NPM package called “live-server” — it provides a basic local file server, so that you can view the HTML file in-browser, and automatically reloads the page when the HTML/CSS changes.</p>
+<p>Start by installing dependencies:</p>
+<pre><code>npm install</code></pre>
+<p>Run the “start” script to start the server:</p>
+<pre><code>npm run start</code></pre>
+<p>You should see a confirmation message like this:</p>
+<figure>
+<img src="./docs/terminal-example.png" alt="Screenshot of a terminal, showing a server running at http://localhost:9000" /><figcaption>Screenshot of a terminal, showing a server running at http://localhost:9000</figcaption>
+</figure>
+<p>You can visit <code>http://localhost:9000</code> to view the page. You should see a bunch of unstyled content:</p>
+<figure>
+<img src="./docs/initial.png" alt="Screenshot of an unstyled page with a couple headings and some paragraphs" /><figcaption>Screenshot of an unstyled page with a couple headings and some paragraphs</figcaption>
+</figure>
+<blockquote>
+<p><strong>Trouble with this process?</strong></p>
+<p>Because this project is vanilla HTML and CSS, you can always open the HTML file in your browser, without fussing with a local file server.</p>
+<p>Certain JS APIs won’t work when viewing files in this way, but that isn’t a concern for this project.</p>
+</blockquote>
+<hr />
+<h2 id="getting-started-notes">Getting Started Notes</h2>
+<ul>
+<li><p>You’re given a decent start in terms of the HTML markup, but not much in the way of styles. You’ll be expected to edit <code>style.css</code> to implement the styles. You can also edit <code>index.html</code> if you wish, though it should be possible to solve this project touching only <code>style.css</code>.</p></li>
+<li><p>Don’t worry too much about “best practices”. Later in this course, we’ll see how to create scalable encapsulated styles. For now, the goal is simply to implement the designs in the screenshots, with whatever organizational strategy comes most naturally to you.</p></li>
+<li><p>You may be tempted to reach for CSS strategies we haven’t yet seen in the course, like flexbox or absolute positioning. Please try and complete this workshop without them. This module is focused on flow-layout and the box-model, and it is possible to lay everything out on the page using only padding, border, and margin. It’s important to be comfortable with these primitives before moving on to more-complex subjects.</p></li>
+<li><p>Future workshops will provide a React starter. For the early workshops, the focus is on the fundamentals, so we’re using pure HTML and CSS. If you feel more comfortable using a JS framework like React, you can go ahead, but please don’t use any component libraries or CSS frameworks. All CSS should be written by hand.</p></li>
+<li><p><strong>Pay close attention to alignment.</strong> For example, you should be able to draw a line along the left, and all text should be neatly aligned:</p></li>
+</ul>
+<figure>
+<img src="./docs/aligned.png" alt="Desktop mockup with a vertical line showing alignment" /><figcaption>Desktop mockup with a vertical line showing alignment</figcaption>
+</figure>
+<p>(I’ve made this image semi-transparent to highlight the alignment; see the Figma for a color-accurate reference!)</p>
+<p>That said: Don’t worry if you can’t create a pixel-perfect recreation. In the solution video, I’ll show you exactly how I did it. Spend an hour or so on this project, and submit whatever you have at that point.</p>
+<h2 id="design-tokens">Design tokens</h2>
+<p>In the early days of the web, sites would be built largely on “feel”. Colors and sizes would be chosen based on the whims of the moment. This led to some very inconsistent-looking websites!</p>
+<p>Nowadays, it’s common to have a set of <em>design tokens</em>. A design token is a value that can be reused. Typically, it’s part of a collection or a scale.</p>
+<p>We’ll learn more about this idea later, but for now, you can copy/paste the values from this list as-needed. Don’t worry about being DRY or using variables; Plop these values in, wherever you need them.</p>
+<p><strong>If you find it difficult to use these tokens, or if you’re not able to achieve a result you’re happy with, don’t worry about it.</strong> Solve it however you can, and then watch the solution video to see how I did it.</p>
+<h3 id="spacing">Spacing</h3>
+<p>This app uses an 8px unit. All spaces are a multiple of 8px:</p>
+<ul>
+<li><code>8px</code></li>
+<li><code>16px</code></li>
+<li><code>24px</code></li>
+<li><code>32px</code></li>
+<li><code>48px</code></li>
+<li><code>64px</code></li>
+<li><code>96px</code></li>
+<li><code>128px</code></li>
+</ul>
+<p>When it comes to max widths (e.g. the maximum width of the card), arbitrary values can be used.</p>
+<h3 id="font">Font</h3>
+<p>1 font is used in this project: <code>Lato</code>. It is already included in the stylesheet.</p>
+<p>For font sizes, the <code>rem</code> unit should be used.</p>
+<p>The scale is:</p>
+<ul>
+<li><code>1rem</code></li>
+<li><code>1.25rem</code></li>
+<li><code>1.5rem</code></li>
+<li><code>2rem</code></li>
+</ul>
+<p>By default, <code>1rem</code> is equivalent to <code>16px</code>.</p>
+<h3 id="color-palette">Color palette</h3>
+<p>Primary (green):</p>
+<ul>
+<li><code>hsl(160deg, 100%, 30%)</code></li>
+</ul>
+<p>Secondary (gold):</p>
+<ul>
+<li><code>hsl(45deg, 100%, 50%)</code> (lighter)</li>
+<li><code>hsl(45deg, 100%, 40%)</code> (darker)</li>
+</ul>
+<p>Grays:</p>
+<ul>
+<li><code>hsl(0deg, 0%, 0%)</code> (black)</li>
+<li><code>hsl(0deg, 0%, 10%)</code> (very dark)</li>
+<li><code>hsl(0deg, 0%, 30%)</code> (dark)</li>
+<li><code>hsl(0deg, 0%, 40%)</code> (medium)</li>
+<li><code>hsl(0deg, 0%, 60%)</code> (light)</li>
+<li><code>hsl(0deg, 0%, 100%)</code> (white)</li>
+</ul>
+<h2 id="submissions">Submissions</h2>
+<p><strong>Workshops are submitted through the course platform.</strong> Commit your changes, push them to your fork, and submit the link by clicking the “Complete lesson” button on the workshop page.</p>
+<p>If you’re not comfortable with Git, you can upload a <code>.zip</code> file using Dropbox or Google Drive, and paste a link to the public file instead.</p>
+
+</body>
+</html>
